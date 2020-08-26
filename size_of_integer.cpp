@@ -1,7 +1,9 @@
 #include <iostream>
 
+// 不写using namespace的话，有两种写法，一种是C92的iostream.h；另一种是直接写std::cout
+using namespace std;
+
 int main(int argc, char *argv[]) {
-    using namespace std;
     cout << "Size of bool: " << sizeof(bool) << endl;
     cout << "Size of char: " << sizeof(char) << endl;
     cout << "Size of short: " << sizeof(short) << endl;

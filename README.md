@@ -8,3 +8,8 @@
 
 - [如何学好C语言](https://coolshell.cn/articles/4102.html)
 
+---
+
+## 琐碎知识
+
+Unix系统的C++文件后缀名是cc
