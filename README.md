@@ -4,5 +4,7 @@
 
 构建起自己的知识体系，学好理论，把技术学得更扎实！
 
+(所以我的Haskell计划就搁置啦)
+
 - [如何学好C语言](https://coolshell.cn/articles/4102.html)
 
