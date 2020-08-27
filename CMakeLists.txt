@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 project(cpp_learn)
 # set(CMAKE_CXX_STANDARD 11)
 # https://stackoverflow.com/questions/27788385/mixing-c-and-c-sources-in-cmake
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99")
 
 # https://stackoverflow.com/questions/13440744/cmake-how-to-compile-based-on-different-main-entries
