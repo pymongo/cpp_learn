@@ -33,16 +33,17 @@ public:
 class Solution {
 public:
     // 搞不懂leetcode上的解答模板为什么那么喜欢用instance的函数，用static不好吗？可能是历史遗留问题吧，Rust的leetcode模板是用association function，而Go就直接是一个函数了
-    static int maxDepth(Node *root) {
+    // 类似Python的typehint，这个 -> int写不写都对编译结果没有影响
+    static auto maxDepth(Node *root) -> int {
         if (root == nullptr) {
             return 0;
         }
         int depth = 0;
-        deque<Node*> queue = deque<Node*>();
+        deque<Node *> queue = deque<Node *>();
         queue.push_back(root);
         queue.push_back(nullptr);
         while (!queue.empty()) {
-            Node* node = queue.front();
+            Node *node = queue.front();
             queue.pop_front();
             if (node == nullptr) {
                 depth++;
@@ -52,7 +53,9 @@ public:
                 queue.push_back(nullptr);
                 continue;
             }
-            for (Node* child_node : node->children) {
+            // auto 可以理解为C++的自动类型推断(Type inference)，C++20版又新增一些自动类型推断的支持
+            // for (Node* child_node : node->children) {
+            for (auto child_node : node->children) {
                 queue.push_back(child_node);
             }
         }
@@ -76,4 +79,43 @@ int main() {
     Node &a_ref = a;
     cout << Solution::maxDepth(a_ptr) << endl;
     return 0;
+}
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    // TODO 结构体的构造方法?
+    explicit TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+};
+
+auto binary_tree_max_depth(TreeNode *root) -> int {
+    if (root == nullptr) {
+        return 0;
+    }
+    int depth = 0;
+    deque<TreeNode *> queue = deque<TreeNode *>();
+    queue.push_back(root);
+    queue.push_back(nullptr);
+    while (!queue.empty()) {
+        TreeNode *node = queue.front();
+        queue.pop_front();
+        if (node == nullptr) {
+            depth++;
+            if (queue.empty()) {
+                break;
+            }
+            queue.push_back(nullptr);
+            continue;
+        }
+
+        if (node->left != nullptr) {
+            queue.push_back(node->left);
+        }
+        if (node->right != nullptr) {
+            queue.push_back(node->right);
+        }
+    }
+
+    return depth;
 }

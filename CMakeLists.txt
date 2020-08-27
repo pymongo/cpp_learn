@@ -11,13 +11,13 @@ SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99")
 add_executable(size_of_integer size_of_integer.cpp)
 add_executable(return_value_of_printf return_value_of_printf.c)
 add_executable(thread_run_interval_print_time thread_run_interval_print_time.cpp)
-add_executable(leetcode_bfs_maximum_depth_of_n_arr_tree leetcode/bfs/maximum_depth_of_n_arr_tree.cpp)
+add_executable(leetcode_bfs_maximum_depth_of_n_arr_tree leetcode/bfs/maximum_depth_of_n_ary_tree.cpp)
 add_library(
         my_lib
         size_of_integer.cpp
         return_value_of_printf.c
         thread_run_interval_print_time.cpp
-        leetcode/bfs/maximum_depth_of_n_arr_tree.cpp)
+        leetcode/bfs/maximum_depth_of_n_ary_tree.cpp)
 
 target_link_libraries(size_of_integer my_lib)
 target_link_libraries(return_value_of_printf my_lib)
