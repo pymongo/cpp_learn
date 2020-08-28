@@ -61,6 +61,35 @@ public:
         }
         return depth;
     }
+
+    static auto level_order_traversal(Node *root) -> vector<vector<int>> {
+        if (root == nullptr) {
+            return vector<vector<int>>();
+        }
+        vector<vector<int>> res = vector<vector<int>>();
+        vector<int> cur_level = vector<int>();
+        deque<Node *> queue = deque<Node *>();
+        queue.push_back(root);
+        queue.push_back(nullptr);
+        while (!queue.empty()) {
+            Node *node = queue.front();
+            queue.pop_front();
+            if (node == nullptr) {
+                res.push_back(cur_level);
+                cur_level.clear();
+                if (queue.empty()) {
+                    break;
+                }
+                queue.push_back(nullptr);
+                continue;
+            }
+            cur_level.push_back(node->val);
+            for (auto child_node : node->children) {
+                queue.push_back(child_node);
+            }
+        }
+        return res;
+    }
 };
 
 struct ListNode {
