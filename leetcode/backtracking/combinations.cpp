@@ -7,12 +7,13 @@ class Solution {
 public:
     static auto combinations(int n, int k) -> vector<vector<int>> {
         vector<vector<int>> res = vector<vector<int>>();
-        helper(res, 1, vector<int>(), n, k);
+        vector<int> curr = vector<int>();
+        helper(res, 1, curr, n, k);
         return res;
     }
 
 private:
-    static void helper(vector<vector<int>> res, int start, vector<int> curr, int n, int k) {
+    static void helper(vector<vector<int>>& res, int start, vector<int>& curr, int n, int k) {
         if (curr.size() == k) {
             // Python: res.append(curr.copy)
             res.push_back(curr);
