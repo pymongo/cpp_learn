@@ -15,7 +15,6 @@ public:
 private:
     static void helper(vector<vector<int>>& res, int start, vector<int>& curr, int n, int k) {
         if (curr.size() == k) {
-            // Python: res.append(curr.copy)
             res.push_back(curr);
             return;
         }
