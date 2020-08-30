@@ -23,6 +23,7 @@ void read_stdin_1() {
 }
 #endif
 
+// C does not support default arguments, C++支持像Python一样参数能有默认值
 void read_stdin_sum_of_input() {
     // 从stdin中读取最长为128个字符的内容，遇到\n或EOF就停止
     // 相比scanf和fgets能完整读完一行

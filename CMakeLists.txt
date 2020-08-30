@@ -11,6 +11,7 @@ set(CMAKE_CXX_STANDARD 14)
 # 不然就只能挨地敲g++地编译了
 add_executable(stdin_c stdin.c)
 add_executable(stdin_cpp stdin.cpp)
+add_executable(file_input_stream file_input_stream.cpp)
 add_executable(size_of_integer size_of_integer.cpp)
 add_executable(return_value_of_printf return_value_of_printf.c)
 add_executable(thread_run_interval_print_time thread_run_interval_print_time.cpp)
@@ -23,6 +24,7 @@ add_library(
         my_lib
         stdin.c
         stdin.cpp
+        file_input_stream.cpp
         size_of_integer.cpp
         return_value_of_printf.c
         thread_run_interval_print_time.cpp
@@ -36,6 +38,7 @@ add_library(
 
 target_link_libraries(stdin_c my_lib)
 target_link_libraries(stdin_cpp my_lib)
+target_link_libraries(file_input_stream my_lib)
 target_link_libraries(size_of_integer my_lib)
 target_link_libraries(return_value_of_printf my_lib)
 target_link_libraries(thread_run_interval_print_time my_lib)

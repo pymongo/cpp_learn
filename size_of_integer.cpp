@@ -4,11 +4,11 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
-    cout << "Size of bool: " << sizeof(bool) << endl;
-    cout << "Size of char: " << sizeof(char) << endl;
-    cout << "Size of short: " << sizeof(short) << endl;
-    cout << "Size of int: " << sizeof(int) << endl;
-    cout << "Size of long: " << sizeof(long) << endl;
-    cout << "Size of long long: " << sizeof(long long) << endl;
+    cout << "Size of bool: " << sizeof(bool) << '\n'
+         << "Size of char: " << sizeof(char) << '\n'
+         << "Size of short: " << sizeof(short) << '\n'
+         << "Size of int: " << sizeof(int) << '\n'
+         << "Size of long: " << sizeof(long) << '\n'
+         << "Size of long long: " << sizeof(long long) << endl;
     return 0;
 }
