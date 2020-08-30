@@ -9,6 +9,8 @@ set(CMAKE_CXX_STANDARD 14)
 # https://stackoverflow.com/questions/13440744/cmake-how-to-compile-based-on-different-main-entries
 # this would involve compiling the sources twice and is inefficient
 # 不然就只能挨地敲g++地编译了
+add_executable(stdin_c stdin.c)
+add_executable(stdin_cpp stdin.cpp)
 add_executable(size_of_integer size_of_integer.cpp)
 add_executable(return_value_of_printf return_value_of_printf.c)
 add_executable(thread_run_interval_print_time thread_run_interval_print_time.cpp)
@@ -19,6 +21,8 @@ add_executable(reverse_words_in_a_string_3 leetcode/easy/reverse_words_in_a_stri
 add_executable(remove_duplicates_from_sorted_list leetcode/linked_list/remove_duplicates_from_sorted_list.cpp)
 add_library(
         my_lib
+        stdin.c
+        stdin.cpp
         size_of_integer.cpp
         return_value_of_printf.c
         thread_run_interval_print_time.cpp
@@ -30,6 +34,8 @@ add_library(
 #        leetcode/linked_list/linked_list.hpp
 )
 
+target_link_libraries(stdin_c my_lib)
+target_link_libraries(stdin_cpp my_lib)
 target_link_libraries(size_of_integer my_lib)
 target_link_libraries(return_value_of_printf my_lib)
 target_link_libraries(thread_run_interval_print_time my_lib)
