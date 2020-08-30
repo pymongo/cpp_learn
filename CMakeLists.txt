@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
 project(cpp_learn)
-# set(CMAKE_CXX_STANDARD 11)
+# gcc不能编译C++源文件，但是g++可以编译C语言的文件
+set(CMAKE_CXX_STANDARD 14)
 # https://stackoverflow.com/questions/27788385/mixing-c-and-c-sources-in-cmake
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
-SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99")
+#SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+#SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99")
 
 # https://stackoverflow.com/questions/13440744/cmake-how-to-compile-based-on-different-main-entries
 # this would involve compiling the sources twice and is inefficient
@@ -24,6 +25,7 @@ add_library(
         leetcode/backtracking/combinations.cpp
         leetcode/easy/transpose_matrix.cpp
         leetcode/linked_list/remove_duplicates_from_sorted_list.cpp
+#        leetcode/linked_list/linked_list.hpp
 )
 
 target_link_libraries(size_of_integer my_lib)

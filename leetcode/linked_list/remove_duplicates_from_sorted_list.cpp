@@ -1,13 +1,7 @@
 #include <iostream>
+#include "linked_list.hpp"
 
 using namespace std;
-
-struct ListNode {
-    int val;
-    ListNode *next;
-
-    explicit ListNode(int x) : val(x), next(nullptr) {}
-};
 
 class Solution {
 public:
@@ -26,16 +20,8 @@ public:
 };
 
 int main() {
-    ListNode head = ListNode(1);
-    ListNode n2 = ListNode(1);
-    head.next = &n2;
-    ListNode n3 = ListNode(2);
-    n2.next = &n3;
-    ListNode n4 = ListNode(3);
-    n3.next = &n4;
-    ListNode n5 = ListNode(3);
-    n4.next = &n5;
-//    Solution::deleteDuplicates(&head);
+    vector<int> nums = vector<int>{1,1,2,3,3};
+    ListNode head = vec_to_linked_list(nums);
     ListNode* cur = &head;
     while (cur != nullptr) {
         cout << cur->val << "->";
