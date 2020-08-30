@@ -27,7 +27,8 @@ ListNode vec_to_linked_list(vector<int>& nums) {
 
 void print_list(ListNode* head) {
     ListNode* cur = head;
-    while (cur != nullptr) {
+//    while (cur != nullptr) {
+    while (cur) {
         cout << cur->val << "->";
         cur = cur->next;
     }

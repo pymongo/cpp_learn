@@ -19,14 +19,10 @@ public:
     }
 };
 
+// g++ -std=c++11 remove_duplicates_from_sorted_list.cpp linked_list.hpp
 int main() {
     vector<int> nums = vector<int>{1,1,2,3,3};
     ListNode head = vec_to_linked_list(nums);
-    ListNode* cur = &head;
-    while (cur != nullptr) {
-        cout << cur->val << "->";
-        cur = cur->next;
-    }
-    cout << "NULL" << endl;
+    print_list(&head);
     return 0;
 }
