@@ -15,6 +15,7 @@ add_executable(file_input_stream file_input_stream.cpp)
 add_executable(size_of_integer size_of_integer.cpp)
 add_executable(return_value_of_printf return_value_of_printf.c)
 add_executable(thread_run_interval_print_time thread_run_interval_print_time.cpp)
+add_executable(impl_strcpy impl_strcpy.cpp)
 add_executable(n_ary_tree_level_order leetcode/bfs/n_ary_tree_level_order.cpp)
 add_executable(combinations leetcode/backtracking/combinations.cpp)
 add_executable(transpose_matrix leetcode/easy/transpose_matrix.cpp)
@@ -28,6 +29,7 @@ add_library(
         size_of_integer.cpp
         return_value_of_printf.c
         thread_run_interval_print_time.cpp
+        impl_strcpy.cpp
         leetcode/bfs/n_ary_tree_level_order.cpp
         leetcode/backtracking/combinations.cpp
         leetcode/easy/transpose_matrix.cpp
@@ -42,6 +44,7 @@ target_link_libraries(file_input_stream my_lib)
 target_link_libraries(size_of_integer my_lib)
 target_link_libraries(return_value_of_printf my_lib)
 target_link_libraries(thread_run_interval_print_time my_lib)
+target_link_libraries(impl_strcpy my_lib)
 target_link_libraries(n_ary_tree_level_order my_lib)
 target_link_libraries(combinations my_lib)
 target_link_libraries(transpose_matrix my_lib)

@@ -23,9 +23,9 @@ public:
         this->val = _val;
     }
 
-    Node(int _val, vector<Node *> _children) {
-        this->val = _val;
-        this->children = move(_children);
+    Node(int val, vector<Node *> children) {
+        this->val = val;
+        this->children = move(children);
     }
 };
 
