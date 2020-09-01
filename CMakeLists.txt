@@ -17,11 +17,12 @@ add_executable(return_value_of_printf return_value_of_printf.c)
 add_executable(thread_run_interval_print_time thread_run_interval_print_time.cpp)
 add_executable(impl_strcpy impl_strcpy.cpp)
 add_executable(n_ary_tree_level_order leetcode/bfs/n_ary_tree_level_order.cpp)
+add_executable(keys_and_rooms leetcode/bfs/keys_and_rooms.cpp)
 add_executable(combinations leetcode/backtracking/combinations.cpp)
 add_executable(transpose_matrix leetcode/easy/transpose_matrix.cpp)
 add_executable(reverse_words_in_a_string_3 leetcode/easy/reverse_words_in_a_string_3.cpp)
 add_executable(remove_duplicates_from_sorted_list leetcode/linked_list/remove_duplicates_from_sorted_list.cpp)
-add_executable(keys_and_rooms leetcode/graph/keys_and_rooms.cpp)
+add_executable(dining_philosophers_problem leetcode/concurrency/dining_philosophers_problem.cpp)
 add_library(
         my_lib
         stdin.c
@@ -32,11 +33,12 @@ add_library(
         thread_run_interval_print_time.cpp
         impl_strcpy.cpp
         leetcode/bfs/n_ary_tree_level_order.cpp
+        leetcode/bfs/keys_and_rooms.cpp
         leetcode/backtracking/combinations.cpp
         leetcode/easy/transpose_matrix.cpp
         leetcode/easy/reverse_words_in_a_string_3.cpp
         leetcode/linked_list/remove_duplicates_from_sorted_list.cpp
-        leetcode/graph/keys_and_rooms.cpp
+        leetcode/concurrency/dining_philosophers_problem.cpp
 )
 
 target_link_libraries(stdin_c my_lib)
@@ -52,3 +54,4 @@ target_link_libraries(transpose_matrix my_lib)
 target_link_libraries(reverse_words_in_a_string_3 my_lib)
 target_link_libraries(remove_duplicates_from_sorted_list my_lib)
 target_link_libraries(keys_and_rooms my_lib)
+target_link_libraries(dining_philosophers_problem my_lib)
