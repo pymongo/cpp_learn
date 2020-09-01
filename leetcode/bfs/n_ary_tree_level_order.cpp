@@ -1,7 +1,7 @@
 #include <iostream>
 #include <utility> /* move */
 #include <vector>
-#include <deque>
+#include <queue>
 
 using namespace std;
 
@@ -39,24 +39,24 @@ public:
             return 0;
         }
         int depth = 0;
-        deque<Node *> queue = deque<Node *>();
-        queue.push_back(root);
-        queue.push_back(nullptr);
-        while (!queue.empty()) {
-            Node *node = queue.front();
-            queue.pop_front();
+        queue<Node *> q = queue<Node *>();
+        q.push(root);
+        q.push(nullptr);
+        while (!q.empty()) {
+            Node *node = q.front();
+            q.pop();
             if (node == nullptr) {
                 depth++;
-                if (queue.empty()) {
+                if (q.empty()) {
                     break;
                 }
-                queue.push_back(nullptr);
+                q.push(nullptr);
                 continue;
             }
             // auto 可以理解为C++的自动类型推断(Type inference)，C++20版又新增一些自动类型推断的支持
             // for (Node* child_node : node->children) {
             for (auto child_node : node->children) {
-                queue.push_back(child_node);
+                q.push(child_node);
             }
         }
         return depth;
@@ -68,24 +68,24 @@ public:
         }
         vector<vector<int>> res = vector<vector<int>>();
         vector<int> cur_level = vector<int>();
-        deque<Node *> queue = deque<Node *>();
-        queue.push_back(root);
-        queue.push_back(nullptr);
-        while (!queue.empty()) {
-            Node *node = queue.front();
-            queue.pop_front();
+        queue<Node *> q = queue<Node *>();
+        q.push(root);
+        q.push(nullptr);
+        while (!q.empty()) {
+            Node *node = q.front();
+            q.pop();
             if (node == nullptr) {
                 res.push_back(cur_level);
                 cur_level.clear();
-                if (queue.empty()) {
+                if (q.empty()) {
                     break;
                 }
-                queue.push_back(nullptr);
+                q.push(nullptr);
                 continue;
             }
             cur_level.push_back(node->val);
             for (auto child_node : node->children) {
-                queue.push_back(child_node);
+                q.push(child_node);
             }
         }
         return res;
@@ -123,26 +123,26 @@ auto binary_tree_max_depth(TreeNode *root) -> int {
         return 0;
     }
     int depth = 0;
-    deque<TreeNode *> queue = deque<TreeNode *>();
-    queue.push_back(root);
-    queue.push_back(nullptr);
-    while (!queue.empty()) {
-        TreeNode *node = queue.front();
-        queue.pop_front();
+    queue<TreeNode *> q = queue<TreeNode *>();
+    q.push(root);
+    q.push(nullptr);
+    while (!q.empty()) {
+        TreeNode *node = q.front();
+        q.pop();
         if (node == nullptr) {
             depth++;
-            if (queue.empty()) {
+            if (q.empty()) {
                 break;
             }
-            queue.push_back(nullptr);
+            q.push(nullptr);
             continue;
         }
 
         if (node->left != nullptr) {
-            queue.push_back(node->left);
+            q.push(node->left);
         }
         if (node->right != nullptr) {
-            queue.push_back(node->right);
+            q.push(node->right);
         }
     }
 
