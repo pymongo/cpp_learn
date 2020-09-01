@@ -23,6 +23,7 @@ add_executable(transpose_matrix leetcode/easy/transpose_matrix.cpp)
 add_executable(reverse_words_in_a_string_3 leetcode/easy/reverse_words_in_a_string_3.cpp)
 add_executable(remove_duplicates_from_sorted_list leetcode/linked_list/remove_duplicates_from_sorted_list.cpp)
 add_executable(dining_philosophers_problem leetcode/concurrency/dining_philosophers_problem.cpp)
+add_executable(add_bigint_string leetcode/easy/add_bigint_string.cpp)
 add_library(
         my_lib
         stdin.c
@@ -39,7 +40,7 @@ add_library(
         leetcode/easy/reverse_words_in_a_string_3.cpp
         leetcode/linked_list/remove_duplicates_from_sorted_list.cpp
         leetcode/concurrency/dining_philosophers_problem.cpp
-)
+        leetcode/easy/add_bigint_string.cpp)
 
 target_link_libraries(stdin_c my_lib)
 target_link_libraries(stdin_cpp my_lib)
@@ -55,3 +56,4 @@ target_link_libraries(reverse_words_in_a_string_3 my_lib)
 target_link_libraries(remove_duplicates_from_sorted_list my_lib)
 target_link_libraries(keys_and_rooms my_lib)
 target_link_libraries(dining_philosophers_problem my_lib)
+target_link_libraries(add_bigint_string my_lib)
