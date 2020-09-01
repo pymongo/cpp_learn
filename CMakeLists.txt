@@ -21,6 +21,7 @@ add_executable(combinations leetcode/backtracking/combinations.cpp)
 add_executable(transpose_matrix leetcode/easy/transpose_matrix.cpp)
 add_executable(reverse_words_in_a_string_3 leetcode/easy/reverse_words_in_a_string_3.cpp)
 add_executable(remove_duplicates_from_sorted_list leetcode/linked_list/remove_duplicates_from_sorted_list.cpp)
+add_executable(keys_and_rooms leetcode/graph/keys_and_rooms.cpp)
 add_library(
         my_lib
         stdin.c
@@ -35,7 +36,7 @@ add_library(
         leetcode/easy/transpose_matrix.cpp
         leetcode/easy/reverse_words_in_a_string_3.cpp
         leetcode/linked_list/remove_duplicates_from_sorted_list.cpp
-#        leetcode/linked_list/linked_list.hpp
+        leetcode/graph/keys_and_rooms.cpp
 )
 
 target_link_libraries(stdin_c my_lib)
@@ -50,3 +51,4 @@ target_link_libraries(combinations my_lib)
 target_link_libraries(transpose_matrix my_lib)
 target_link_libraries(reverse_words_in_a_string_3 my_lib)
 target_link_libraries(remove_duplicates_from_sorted_list my_lib)
+target_link_libraries(keys_and_rooms my_lib)
