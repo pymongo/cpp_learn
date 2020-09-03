@@ -1,6 +1,8 @@
 #include <iostream>
 
-using namespace std;
+//using namespace std;
+using std::cout;
+using std::string;
 
 class Animal {
 public:
@@ -52,7 +54,6 @@ void animal_eat_by_ptr(Animal* animal) {
 int main() {
     // new和delete一般要成对出现
     int* ptr = new int;
-    cout << *ptr << endl;
     delete ptr;
 //    auto* animal = new Animal;
 //    animal->eat();

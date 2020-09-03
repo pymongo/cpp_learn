@@ -25,7 +25,7 @@ if ((x >= - EPSINON) && (x <= EPSINON) {}
 
 所有字段共用一个内存区域，例如修改point.x的同时也会把point.y给修改了
 
-### Resource Acquisition Is Initialization
+### RAII机制(Resource Acquisition Is Initialization)
 
 https://en.cppreference.com/w/cpp/language/raii
 
@@ -43,4 +43,4 @@ C++默认是调用拷贝构造函数的，而不是Move的，需要显示调用M
 
 栈内存变量的大小必须是编译时可知的，所以不允许数组的长度是一个变量名
 
-friend: 如果B是A的友元函数和友元类，则B可以访问到A的私有属性/函数
+friend: 如果B是A的友元函数和友元类，则B可以访问到A的私有属性/函数，一种友元函数的应用的重载操作符，不过不推荐这么写

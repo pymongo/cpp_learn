@@ -1,10 +1,12 @@
 cmake_minimum_required(VERSION 3.16)
 project(cpp_learn)
 # gcc不能编译C++源文件，但是g++可以编译C语言的文件
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 # https://stackoverflow.com/questions/27788385/mixing-c-and-c-sources-in-cmake
 #SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 #SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99")
+include_directories(/usr/local/Cellar/boost/1.73.0/include)
+link_directories(/usr/local/Cellar/boost/1.73.0/lib)
 
 # https://stackoverflow.com/questions/13440744/cmake-how-to-compile-based-on-different-main-entries
 # this would involve compiling the sources twice and is inefficient
@@ -17,6 +19,8 @@ add_executable(return_value_of_printf return_value_of_printf.c)
 add_executable(thread_run_interval_print_time thread_run_interval_print_time.cpp)
 add_executable(impl_strcpy impl_strcpy.cpp)
 add_executable(polymorphism polymorphism.cpp)
+add_executable(boost_math boost_math.cpp)
+# leetcode
 add_executable(n_ary_tree_level_order leetcode/bfs/n_ary_tree_level_order.cpp)
 add_executable(keys_and_rooms leetcode/bfs/keys_and_rooms.cpp)
 add_executable(combinations leetcode/backtracking/combinations.cpp)
@@ -35,6 +39,7 @@ add_library(
         thread_run_interval_print_time.cpp
         impl_strcpy.cpp
         polymorphism.cpp
+        boost_math.cpp
         leetcode/bfs/n_ary_tree_level_order.cpp
         leetcode/bfs/keys_and_rooms.cpp
         leetcode/backtracking/combinations.cpp
@@ -60,3 +65,4 @@ target_link_libraries(keys_and_rooms my_lib)
 target_link_libraries(dining_philosophers_problem my_lib)
 target_link_libraries(add_bigint_string my_lib)
 target_link_libraries(polymorphism my_lib)
+target_link_libraries(boost_math my_lib)
