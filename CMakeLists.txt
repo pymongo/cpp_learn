@@ -16,6 +16,7 @@ add_executable(size_of_integer size_of_integer.cpp)
 add_executable(return_value_of_printf return_value_of_printf.c)
 add_executable(thread_run_interval_print_time thread_run_interval_print_time.cpp)
 add_executable(impl_strcpy impl_strcpy.cpp)
+add_executable(polymorphism polymorphism.cpp)
 add_executable(n_ary_tree_level_order leetcode/bfs/n_ary_tree_level_order.cpp)
 add_executable(keys_and_rooms leetcode/bfs/keys_and_rooms.cpp)
 add_executable(combinations leetcode/backtracking/combinations.cpp)
@@ -33,6 +34,7 @@ add_library(
         return_value_of_printf.c
         thread_run_interval_print_time.cpp
         impl_strcpy.cpp
+        polymorphism.cpp
         leetcode/bfs/n_ary_tree_level_order.cpp
         leetcode/bfs/keys_and_rooms.cpp
         leetcode/backtracking/combinations.cpp
@@ -57,3 +59,4 @@ target_link_libraries(remove_duplicates_from_sorted_list my_lib)
 target_link_libraries(keys_and_rooms my_lib)
 target_link_libraries(dining_philosophers_problem my_lib)
 target_link_libraries(add_bigint_string my_lib)
+target_link_libraries(polymorphism my_lib)
