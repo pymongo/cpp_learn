@@ -12,19 +12,6 @@
 
 cpp rust这种主要用于底层性能关键组件，非得往上层用，那是找虐
 
-## C++的浮点数比较要像Rust一样考虑误差
-
-例如判断某个f32是不是0
-
-```cpp
-const float EPSINON = 0.00001;   
-if ((x >= - EPSINON) && (x <= EPSINON) {}
-```
-
-### Union
-
-所有字段共用一个内存区域，例如修改point.x的同时也会把point.y给修改了
-
 ### RAII机制(Resource Acquisition Is Initialization)
 
 https://en.cppreference.com/w/cpp/language/raii
@@ -43,4 +30,29 @@ C++默认是调用拷贝构造函数的，而不是Move的，需要显示调用M
 
 栈内存变量的大小必须是编译时可知的，所以不允许数组的长度是一个变量名
 
-friend: 如果B是A的友元函数和友元类，则B可以访问到A的私有属性/函数，一种友元函数的应用的重载操作符，不过不推荐这么写
+### 友元函数/类
+
+friend: 如果B是A的友元函数和友元类，则B可以访问到A的私有属性/函数
+
+尽管友元函数/类 会在类中定义，但是友元函数/类并不属于内的成员
+
+友元函数的应用: 重载<<运算符，例如: `friend ostream& operator<<(ostream &output, Point& p)`
+
+### Union
+
+所有字段共用一个内存区域，例如修改point.x的同时也会把point.y给修改了
+
+### C++的浮点数比较要像Rust一样考虑误差
+
+例如判断某个f32是不是0
+
+```cpp
+const float EPSINON = 0.00001;   
+if ((x >= - EPSINON) && (x <= EPSINON) {}
+```
+
+### struct和class差异
+
+除了默认的access level有区别(struct成员默认是public，class成员默认是privated)
+
+struct也能有构造函数、重载运算符、

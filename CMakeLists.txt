@@ -20,6 +20,7 @@ add_executable(thread_run_interval_print_time thread_run_interval_print_time.cpp
 add_executable(impl_strcpy impl_strcpy.cpp)
 add_executable(polymorphism polymorphism.cpp)
 add_executable(boost_math boost_math.cpp)
+add_executable(operator_overload operator_overload.cpp)
 # leetcode
 add_executable(n_ary_tree_level_order leetcode/bfs/n_ary_tree_level_order.cpp)
 add_executable(keys_and_rooms leetcode/bfs/keys_and_rooms.cpp)
@@ -40,6 +41,7 @@ add_library(
         impl_strcpy.cpp
         polymorphism.cpp
         boost_math.cpp
+        operator_overload.cpp
         leetcode/bfs/n_ary_tree_level_order.cpp
         leetcode/bfs/keys_and_rooms.cpp
         leetcode/backtracking/combinations.cpp
@@ -48,7 +50,6 @@ add_library(
         leetcode/linked_list/remove_duplicates_from_sorted_list.cpp
         leetcode/concurrency/dining_philosophers_problem.cpp
         leetcode/easy/add_bigint_string.cpp)
-
 target_link_libraries(stdin_c my_lib)
 target_link_libraries(stdin_cpp my_lib)
 target_link_libraries(file_input_stream my_lib)
@@ -66,3 +67,4 @@ target_link_libraries(dining_philosophers_problem my_lib)
 target_link_libraries(add_bigint_string my_lib)
 target_link_libraries(polymorphism my_lib)
 target_link_libraries(boost_math my_lib)
+target_link_libraries(operator_overload my_lib)

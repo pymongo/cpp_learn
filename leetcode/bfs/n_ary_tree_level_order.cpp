@@ -98,7 +98,7 @@ struct ListNode {
 };
 
 int main() {
-    ListNode head = ListNode{.val=1, .next=NULL};
+    auto head = ListNode{.val=1, .next=NULL};
     ListNode *head_ptr = &head;
 //    ListNode& head_ref = head;
 //    free(head_ptr);

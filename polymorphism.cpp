@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 //using namespace std;
 using std::cout;
@@ -47,8 +48,26 @@ void animal_eat_by_ref(Animal& animal) {
 }
 
 void animal_eat_by_ptr(Animal* animal) {
+    cout << "type: " << typeid(decltype(animal)).name() << '\n';
     animal->eat();
 }
+
+struct DynAnimal {
+    virtual void eat() = 0;
+};
+
+// 可以写成virtual DynAnimal也可以不加virtual
+struct CatStruct: virtual DynAnimal {
+    void eat() override {
+        cout << "CatStruct is eatring" << '\n';
+    }
+};
+
+struct DogStruct: DynAnimal {
+    void eat() override {
+        cout << "DogStruct is eatring" << '\n';
+    }
+};
 
 // C++/Java函数重载(overload)的返回值的返回值可以不同
 int main() {
@@ -64,13 +83,23 @@ int main() {
     animal_eat_by_ref(dog);
     animal_eat_by_ptr(&cat);
     animal_eat_by_ptr(&dog);
-
     // 如果Animal的析构函数不是虚函数，则cat_2析构时会调用Animal的析构函数而不是Cat自己的析构函数造成UB
     Animal* cat_2 = new Cat();
     delete cat_2;
 
+    cout << "== test DynAnimal\n\n";
+
+    auto dyn_cat = CatStruct{};
+    auto dyn_dog = DogStruct{};
+    auto animals = std::vector<DynAnimal*>{&dyn_cat, &dyn_dog};
+    for (auto animal : animals) {
+        animal->eat();
+    }
+
     // class Pig: Animal
     // can't cast Pig to it private Base class Animal
     // animal_eat(&pig);
+
+    cout << "== end\n\n";
     return 0;
 }
