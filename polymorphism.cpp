@@ -21,7 +21,7 @@ public:
 };
 
 // C++默认是protected继承
-class Cat : public Animal {
+class Cat : virtual public Animal {
 public:
     ~Cat() override {
         cout << "Cat's deconstructor\n";
@@ -32,7 +32,10 @@ public:
     }
 };
 
-class Dog : public Animal {
+// 虚继承解决什么问题: 例如BC继承了A，D又多继承了BC，如果A有name字段那么D会有两份name
+// 虚继承: BC继承A后会得到A的name字段，但是BC再往下派生的类会没有name字段
+// 可以认为虚继承为了解决diamond inheritance带来的字段重复
+class Dog : virtual public Animal {
 public:
     ~Dog() override {
         cout << "Dog's deconstructor\n";
