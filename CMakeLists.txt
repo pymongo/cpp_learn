@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(cpp_learn)
-# gcc不能编译C++源文件，但是g++可以编译C语言的文件
+# gcc不能编译C++源文件，但是g++可以编译C语言的文件，所以全局用g++就能同时编译C和C++的源代码
 set(CMAKE_CXX_STANDARD 17)
 # https://stackoverflow.com/questions/27788385/mixing-c-and-c-sources-in-cmake
 #SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
@@ -30,6 +30,8 @@ add_executable(reverse_words_in_a_string_3 leetcode/easy/reverse_words_in_a_stri
 add_executable(remove_duplicates_from_sorted_list leetcode/linked_list/remove_duplicates_from_sorted_list.cpp)
 add_executable(dining_philosophers_problem leetcode/concurrency/dining_philosophers_problem.cpp)
 add_executable(add_bigint_string leetcode/easy/add_bigint_string.cpp)
+# system call
+add_executable(fork_child_process_and_wait system_call/fork_child_process_and_wait)
 add_library(
         my_lib
         stdin.c
@@ -49,7 +51,9 @@ add_library(
         leetcode/easy/reverse_words_in_a_string_3.cpp
         leetcode/linked_list/remove_duplicates_from_sorted_list.cpp
         leetcode/concurrency/dining_philosophers_problem.cpp
-        leetcode/easy/add_bigint_string.cpp)
+        leetcode/easy/add_bigint_string.cpp
+        system_call/fork_child_process_and_wait
+)
 target_link_libraries(stdin_c my_lib)
 target_link_libraries(stdin_cpp my_lib)
 target_link_libraries(file_input_stream my_lib)
@@ -68,3 +72,4 @@ target_link_libraries(add_bigint_string my_lib)
 target_link_libraries(polymorphism my_lib)
 target_link_libraries(boost_math my_lib)
 target_link_libraries(operator_overload my_lib)
+target_link_libraries(fork_child_process_and_wait my_lib)
