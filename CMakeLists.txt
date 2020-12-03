@@ -1,16 +1,15 @@
 cmake_minimum_required(VERSION 3.16)
 project(cpp_learn)
-# gcc不能编译C++源文件，但是g++可以编译C语言的文件，所以全局用g++就能同时编译C和C++的源代码
 set(CMAKE_CXX_STANDARD 17)
-# https://stackoverflow.com/questions/27788385/mixing-c-and-c-sources-in-cmake
-#SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
-#SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99")
-include_directories(/usr/local/Cellar/boost/1.73.0/include)
-link_directories(/usr/local/Cellar/boost/1.73.0/lib)
 
-# https://stackoverflow.com/questions/13440744/cmake-how-to-compile-based-on-different-main-entries
-# this would involve compiling the sources twice and is inefficient
-# 不然就只能挨地敲g++地编译了
+#通过`brew install boost`或`sudo apt install libboost-all-dev`安装的boost会自动安装到include_path和link_path中
+#include_directories(/usr/include/boost)
+#link_directories(/usr/lib/arm-linux-gnueabihf)
+find_package(Boost)
+include_directories(${Boost_INCLUDE_DIRS})
+
+add_executable(boost_example_random boost_example_random.cpp)
+target_link_libraries(boost_example_random ${Boost_LIBRARIES})
 add_executable(stdin_c stdin.c)
 add_executable(stdin_cpp stdin.cpp)
 add_executable(file_input_stream file_input_stream.cpp)
@@ -19,7 +18,6 @@ add_executable(return_value_of_printf return_value_of_printf.c)
 add_executable(thread_run_interval_print_time thread_run_interval_print_time.cpp)
 add_executable(impl_strcpy impl_strcpy.cpp)
 add_executable(polymorphism polymorphism.cpp)
-add_executable(boost_math boost_math.cpp)
 add_executable(operator_overload operator_overload.cpp)
 # leetcode
 add_executable(n_ary_tree_level_order leetcode/bfs/n_ary_tree_level_order.cpp)
@@ -30,46 +28,5 @@ add_executable(reverse_words_in_a_string_3 leetcode/easy/reverse_words_in_a_stri
 add_executable(remove_duplicates_from_sorted_list leetcode/linked_list/remove_duplicates_from_sorted_list.cpp)
 add_executable(dining_philosophers_problem leetcode/concurrency/dining_philosophers_problem.cpp)
 add_executable(add_bigint_string leetcode/easy/add_bigint_string.cpp)
-# system call
+# system_call
 add_executable(fork_child_process_and_wait system_call/fork_child_process_and_wait)
-add_library(
-        my_lib
-        stdin.c
-        stdin.cpp
-        file_input_stream.cpp
-        size_of_integer.cpp
-        return_value_of_printf.c
-        thread_run_interval_print_time.cpp
-        impl_strcpy.cpp
-        polymorphism.cpp
-        boost_math.cpp
-        operator_overload.cpp
-        leetcode/bfs/n_ary_tree_level_order.cpp
-        leetcode/bfs/keys_and_rooms.cpp
-        leetcode/backtracking/combinations.cpp
-        leetcode/easy/transpose_matrix.cpp
-        leetcode/easy/reverse_words_in_a_string_3.cpp
-        leetcode/linked_list/remove_duplicates_from_sorted_list.cpp
-        leetcode/concurrency/dining_philosophers_problem.cpp
-        leetcode/easy/add_bigint_string.cpp
-        system_call/fork_child_process_and_wait
-)
-target_link_libraries(stdin_c my_lib)
-target_link_libraries(stdin_cpp my_lib)
-target_link_libraries(file_input_stream my_lib)
-target_link_libraries(size_of_integer my_lib)
-target_link_libraries(return_value_of_printf my_lib)
-target_link_libraries(thread_run_interval_print_time my_lib)
-target_link_libraries(impl_strcpy my_lib)
-target_link_libraries(n_ary_tree_level_order my_lib)
-target_link_libraries(combinations my_lib)
-target_link_libraries(transpose_matrix my_lib)
-target_link_libraries(reverse_words_in_a_string_3 my_lib)
-target_link_libraries(remove_duplicates_from_sorted_list my_lib)
-target_link_libraries(keys_and_rooms my_lib)
-target_link_libraries(dining_philosophers_problem my_lib)
-target_link_libraries(add_bigint_string my_lib)
-target_link_libraries(polymorphism my_lib)
-target_link_libraries(boost_math my_lib)
-target_link_libraries(operator_overload my_lib)
-target_link_libraries(fork_child_process_and_wait my_lib)
