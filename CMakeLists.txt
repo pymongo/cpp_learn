@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(cpp_learn)
+project(learn_cpp)
 set(CMAKE_CXX_STANDARD 17)
 
 #通过`brew install boost`或`sudo apt install libboost-all-dev`安装的boost会自动安装到include_path和link_path中
@@ -13,7 +13,6 @@ target_link_libraries(boost_example_random ${Boost_LIBRARIES})
 add_executable(stdin_c stdin.c)
 add_executable(stdin_cpp stdin.cpp)
 add_executable(file_input_stream file_input_stream.cpp)
-add_executable(size_of_integer size_of_integer.cpp)
 add_executable(return_value_of_printf return_value_of_printf.c)
 add_executable(thread_run_interval_print_time thread_run_interval_print_time.cpp)
 add_executable(impl_strcpy impl_strcpy.cpp)
@@ -30,3 +29,7 @@ add_executable(dining_philosophers_problem leetcode/concurrency/dining_philosoph
 add_executable(add_bigint_string leetcode/easy/add_bigint_string.cpp)
 # system_call
 add_executable(fork_child_process_and_wait system_call/fork_child_process_and_wait)
+# datatype
+add_executable(size_of_integer datatype/size_of_integer.cpp)
+add_executable(wchar datatype/wchar.cpp)
+add_executable(string_offset datatype/string_offset.c)
