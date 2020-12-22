@@ -2,14 +2,29 @@ cmake_minimum_required(VERSION 3.16)
 project(learn_cpp)
 set(CMAKE_CXX_STANDARD 17)
 
+# 添加boost库的方法_1(不能跨平台)
 #通过`brew install boost`或`sudo apt install libboost-all-dev`安装的boost会自动安装到include_path和link_path中
 #include_directories(/usr/include/boost)
 #link_directories(/usr/lib/arm-linux-gnueabihf)
-find_package(Boost)
-include_directories(${Boost_INCLUDE_DIRS})
 
-add_executable(boost_example_random boost_example_random.cpp)
+# 添加boost库的方法_2
+find_package(Boost)
+if (${Boost_FOUND})
+    include_directories(${Boost_INCLUDE_DIRS})
+    message(STATUS "find_package(Boost) ok")
+else (${Boost_FOUND})
+    message(FATAL_ERROR "find_package(Boost) failed!")
+endif (${Boost_FOUND})
+
+# third-party libraries API
+add_executable(boost_example_random third_party_lib/boost_example_random.cpp)
+#target_link_libraries(boost_example_random boost_random) # Boost这个库头文件很多，不能引入
 target_link_libraries(boost_example_random ${Boost_LIBRARIES})
+add_executable(sqlite third_party_lib/sqlite.c)
+target_link_libraries(sqlite sqlite3)# sqlite3库单Header单so比较简单，可以这么导入
+# standard libraries API
+add_executable(regex std_lib/regex.c)
+
 add_executable(stdin_c stdin.c)
 add_executable(stdin_cpp stdin.cpp)
 add_executable(file_input_stream file_input_stream.cpp)
@@ -33,3 +48,4 @@ add_executable(fork_child_process_and_wait system_call/fork_child_process_and_wa
 add_executable(size_of_integer datatype/size_of_integer.cpp)
 add_executable(wchar datatype/wchar.cpp)
 add_executable(string_offset datatype/string_offset.c)
+add_executable(inline_asm inline_asm.c)
