@@ -19,7 +19,6 @@ void read_stdin_1() {
     }
 
     free(buffer);
-//    system("ls");
 }
 #endif
 

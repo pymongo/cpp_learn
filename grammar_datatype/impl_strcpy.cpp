@@ -25,7 +25,6 @@ void test() {
     strcpy(str, "hello");
     free(str);
 
-
     // 正确写法:
     char *s_ptr = (char *) malloc(100);
     if (s_ptr == nullptr) {
