@@ -40,6 +40,7 @@ add_executable(reverse_words_in_a_string_3 leetcode/easy/reverse_words_in_a_stri
 add_executable(remove_duplicates_from_sorted_list leetcode/linked_list/remove_duplicates_from_sorted_list.cpp)
 add_executable(dining_philosophers_problem leetcode/concurrency/dining_philosophers_problem.cpp)
 add_executable(add_bigint_string leetcode/easy/add_bigint_string.cpp)
+add_executable(print_immutable_linked_list_in_reverse leetcode/easy/print_immutable_linked_list_in_reverse.c)
 
 # grammar_datatype
 add_executable(size_of_integer grammar_datatype/size_of_integer.cpp)
