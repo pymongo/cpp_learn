@@ -1,54 +1,54 @@
+#include <stdio.h>
 #include <iostream>
-#include "linked_list.hpp"
+#include <vector>
+#include <algorithm> // for_each
 
 using namespace std;
 
-class Solution {
-public:
-    static ListNode *deleteDuplicates(ListNode *head) {
-        // dummy的值一定不能与链表中的任意值重复
-        auto *dummy = new ListNode(-1024);
-        dummy->next = head;
-        ListNode *pre = dummy;
-        ListNode *cur = dummy->next;
-        while (cur) {
-            if (cur->val == pre->val) {
-                pre->next = cur->next;
-            } else {
-                pre = cur;
-            }
-            cur = cur->next;
-        }
-        return dummy->next;
-    }
-
-    // 遇到重复的就全删掉
-    static ListNode* deleteDuplicates2(ListNode* head) {
-        auto *dummy = new ListNode(-1024);
-        dummy->next = head;
-        ListNode *pre = dummy;
-        while (pre && pre->next) {
-            ListNode* cur = pre->next;
-            // 如果cur是链表尾巴 或 cur不是重复值
-            if (!cur || !cur->next || cur->next->val != cur->val) {
-                pre = cur;
-                continue;
-            }
-            // 将cur前移到重复元素的最后一项
-            while (cur->next && cur->next->val == cur->val) {
-                cur = cur->next;
-            }
-            pre->next = cur->next;
-        }
-        return dummy->next;
-    }
+// linked_list.hpp
+struct ListNode {
+    int val;
+    ListNode *next;
+    // [What does a colon following a C++ constructor name do? - initialization list](https://stackoverflow.com/questions/1272680/what-does-a-colon-following-a-c-constructor-name-do)
+    explicit ListNode(int x) : val(x), next(nullptr) {}
+    ListNode()
 };
 
-// g++ -std=c++11 remove_duplicates_from_sorted_list.cpp linked_list.hpp
+// impl std::fmt::Debug for ListNode
+ostream& operator<<(ostream& stdout, const ListNode& list_node) {
+    //target << source.val;
+    return stdout;
+}
+
+ListNode vec_to_linked_list(vector<int>& nums) {
+    ListNode dummy = ListNode(-1);
+    ListNode* curr = &dummy;
+    for (int num : nums) {
+        // 用了new会分配到堆内存，函数结束后不会被销毁
+        curr->next = new ListNode(num);
+        curr = curr->next;
+        /* 下面写法是分配到栈内存中，不要学！函数结束后可能导致链表无限长
+        ListNode new_node = ListNode(num);
+        cur->next = &new_node;
+        cur = cur->next;
+        */
+    }
+    return *dummy.next;
+}
+
+vector<int> linked_list_to_vec(ListNode* head) {
+    vector<int> nums;
+    ListNode* curr = head;
+    while (curr != nullptr) {
+        nums.push_back(curr->val);
+        curr = curr->next;
+    }
+    for_each(begin(nums), end(nums), [](int num) {
+        cout << num << "<-";
+    });
+    return nums;
+}
+
 int main() {
-    vector<int> nums = vector<int>{1, 1, 2, 3, 3};
-    ListNode head = vec_to_linked_list(nums);
-    ListNode *output = Solution::deleteDuplicates2(&head);
-    print_list(output);
-    return 0;
+    printf("1231321312312323\n");
 }
