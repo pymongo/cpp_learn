@@ -2,6 +2,6 @@
 using namespace std;
 
 int main() {
-    std::cout << "sdfaf" << std::endl;
+    cout << __FILE__ << endl;
     return 0;
 }

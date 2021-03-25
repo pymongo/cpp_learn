@@ -48,6 +48,11 @@ add_executable(wchar grammar_datatype/wchar.cpp)
 add_executable(string_offset grammar_datatype/string_offset.c)
 add_executable(inline_asm std_lib/inline_asm.c)
 add_executable(impl_strcpy grammar_datatype/impl_strcpy.cpp)
-add_executable(polymorphism grammar_datatype/polymorphism.cpp)
 add_executable(operator_overload grammar_datatype/operator_overload.cpp)
 add_executable(stdarg_valist grammar_datatype/stdarg_valist.c)
+
+# cpp_class
+add_executable(polymorphism cpp_class/polymorphism.cpp)
+add_executable(dynamic_cast cpp_class/dynamic_cast.cpp)
+
+add_executable(temp temp.cpp)

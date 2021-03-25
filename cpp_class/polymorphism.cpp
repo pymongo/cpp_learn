@@ -11,7 +11,7 @@ public:
     // 「虚函数」告诉编译器不要静态链接到该函数，而是根据所调用的对象类型(Class)去选择调用相应的函数，
     // 这种操作被称为动态链接或后期绑定，调用函数的方法需要在程序运行过程中查表完成，根据对象中虚指针指向的虚表中的地址
     // 那么「纯虚函数」就是父类的virtual没有主体，例如virtual int area()=0;
-    // 用到多态时析构函数要写成虚函数?
+    //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                用到多态时析构函数要写成虚函数?
     virtual void eat() {
         cout << this->name << " is eating\n";
     }
@@ -32,7 +32,7 @@ public:
     }
 };
 
-// 虚继承解决什么问题: 例如BC继承了A，D又多继承了BC，如果A有name字段那么D会有两份name
+// 2. 虚继承除了解决运行时多态还解决了菱形继承问题: 例如BC继承了A，D又多继承了BC，如果A有name字段那么D会有两份name
 // 虚继承: BC继承A后会得到A的name字段，但是BC再往下派生的类会没有name字段
 // 可以认为虚继承为了解决diamond inheritance带来的字段重复
 class Dog : virtual public Animal {
@@ -56,7 +56,7 @@ void animal_eat_by_ptr(Animal* animal) {
 }
 
 struct DynAnimal {
-    virtual void eat() = 0;
+    virtual void eat() {}
 };
 
 // 可以写成virtual DynAnimal也可以不加virtual
@@ -71,6 +71,8 @@ struct DogStruct: DynAnimal {
         cout << "DogStruct is eatring" << '\n';
     }
 };
+
+void temp() {}
 
 // C++/Java函数重载(overload)的返回值的返回值可以不同
 int main() {
