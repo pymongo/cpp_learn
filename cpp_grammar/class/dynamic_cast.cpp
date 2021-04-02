@@ -1,7 +1,27 @@
 #include <iostream>
 using namespace std;
 
-void temp() {}
+#if 0
+/*
+## error reproduce
+undefined reference to `vtable for Animal'
+undefined reference to `typeinfo for Animal'
+## how to solve
+Base class `void print();` -> `void print(){}`
+*/
+struct Animal {
+    virtual void print();  
+};
+
+struct Cat : Animal {
+    void print() {}
+};
+
+void test() {
+    Animal* animal = new Cat();
+    animal->print();
+}
+#endif
 
 struct Base {
     // 基类的虚函数不能写成`print();`

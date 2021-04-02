@@ -3,7 +3,28 @@
 #include <vector>
 #include <algorithm> // for_each
 
-using namespace std;
+//using namespace std;
+/*
+C/C++多个源文件的函数/变量的链接方式(linkage):
+1. external: 常用于FFI或C引用第三方库API
+2. internal:
+    a.c源文件内定义的`static int num`和b.c源文件内定义的`static int num`是两个不同的变量，并且只能在相应的源文件内使用
+    static变量默认情况下是internal link
+    ```c
+    // a.c
+    int a;
+    static int b=1;
+    ```
+    上述a.c文件中int a;虽然没加static,但是实际存储上是auto自动推断存储类
+    会被自动推断成static存储在可执行文件的数据区
+    但是这个int a;就只能是internal链接，属于单个文件的static全局变量
+    register存储类型要占据CPU一个宝贵的寄存器，有的编译器甚至不允许这么做，一般不怎么用
+3. no linkage: 函数作用域内定义的临时变量，没有任何链接
+*/
+using std::cout;
+using std::ostream;
+using std::vector;
+using std::for_each;
 
 // linked_list.hpp
 struct ListNode {
