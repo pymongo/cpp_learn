@@ -1,4 +1,4 @@
-#include <openssl/md5.h> // MD5
+#include <openssl/md5.h> // MD5 # gcc -lcrypto or gcc -lssl(ssl include crypto)
 #include <stdio.h>       // sprintf, printf
 #include <string.h>      // strlen
 
@@ -27,8 +27,7 @@ fn md5_hash(input: &[u8]) -> [u8; 32];
 我只好给函数加一个存放返回值的可变指针的作为入参
 fn md5_hash(input: &[u8], output: &mut [u8; 32]);
 */
-void md5_hash(const char *input_str, char md5_hash_ouput[32]) {
-    unsigned char md5_output[16];
+void md5_hash(const char *input_str, char md5_hash_ouput[32]) { unsigned char md5_output[16];
     MD5((unsigned char *)input_str, strlen(input_str), md5_output);
     // print output
     // for (int i=0; i<16; i++) printf("%02x", md5_output[i]); printf("\n");

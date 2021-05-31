@@ -1,0 +1,4 @@
+# vscode: "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+BasedOnStyle: LLVM
+IndentWidth: 4
+AccessModifierOffset: -4 # `public:` 和 class 顶格

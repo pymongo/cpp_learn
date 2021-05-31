@@ -19,18 +19,19 @@ add_executable(boost_example_random third_party_lib/boost_example_random.cpp)
 target_link_libraries(boost_example_random ${Boost_LIBRARIES})
 ]]
 
+# temp
+add_executable(temp temp.cpp)
+
 # C++ grammar
 #add_executable(sum_parameter_pack_or_va_list cpp_grammar/sum_parameter_pack_or_va_list.cpp)
 add_executable(polymorphism cpp_grammar/class/polymorphism.cpp)
 add_executable(dynamic_cast cpp_grammar/class/dynamic_cast.cpp)
 
-# temp
-add_executable(temp temp.cpp)
-target_link_libraries(temp crypto)
-
 # third-party libraries API
 add_executable(openssl_md5 third_party_lib/openssl_md5.c)
-target_link_libraries(openssl_md5 crypto) # <openssl/md5.h> // MD5
+target_link_libraries(openssl_md5 crypto) # gcc -lssl or gcc -lcrypto
+add_executable(curl_http_request third_party_lib/curl_http_request.c)
+target_link_libraries(curl_http_request curl)
 
 #[[
 # third-party libraries API
@@ -58,7 +59,6 @@ target_link_libraries(sqlite sqlite3)# sqlite3库单Header单so比较简单，�
 
 # grammar_datatype
 #add_executable(size_of_integer grammar_datatype/size_of_integer.cpp)
-#add_executable(wchar grammar_datatype/wchar.cpp)
 #add_executable(string_offset grammar_datatype/string_offset.c)
 #add_executable(inline_asm std_lib/inline_asm.c)
 #add_executable(impl_strcpy grammar_datatype/impl_strcpy.cpp)

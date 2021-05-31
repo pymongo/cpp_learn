@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -7,7 +8,7 @@ class Solution {
 public:
     static string addStrings(string num1, string num2) {
         string res;
-        int i = (int) num1.size() - 1, j = (int) num2.size() - 1;
+        int i = (int)num1.size() - 1, j = (int)num2.size() - 1;
         int carry = 0;
         while (i >= 0 || j >= 0 || carry > 0) {
             int x = i >= 0 ? num1[i] - '0' : 0;
@@ -24,7 +25,7 @@ public:
 
     static string addBinary(string a, string b) {
         string res;
-        int i = (int) a.size() - 1, j = (int) b.size() - 1;
+        int i = (int)a.size() - 1, j = (int)b.size() - 1;
         int carry = 0;
         while (i >= 0 || j >= 0 || carry > 0) {
             carry += i >= 0 ? a.at(i) == '1' : 0;
@@ -45,4 +46,3 @@ int main() {
     cout << Solution::addStrings("789", "654") << endl;
     return 0;
 }
-
