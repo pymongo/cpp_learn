@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/openssl_md5.dir/third_party_lib/openssl_md5.c.o -o openssl_md5  -lcrypto 

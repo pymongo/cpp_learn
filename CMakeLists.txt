@@ -32,6 +32,14 @@ add_executable(openssl_md5 third_party_lib/openssl_md5.c)
 target_link_libraries(openssl_md5 crypto) # gcc -lssl or gcc -lcrypto
 add_executable(curl_http_request third_party_lib/curl_http_request.c)
 target_link_libraries(curl_http_request curl)
+## gtk https://gist.github.com/fracek/3323924
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GTK REQUIRED gtk+-3.0)
+include_directories(${GTK_INCLUDE_DIRS})
+link_directories(${GTK_LIBRARY_DIRS})
+add_definitions(${GTK_CFLAGS_OTHER})
+add_executable(gtktest third_party_lib/gtk.c)
+target_link_libraries(gtktest ${GTK_LIBRARIES})
 
 #[[
 # third-party libraries API
@@ -49,9 +57,6 @@ target_link_libraries(sqlite sqlite3)# sqlite3库单Header单so比较简单，�
 
 # leetcode
 #add_executable(n_ary_tree_level_order leetcode/bfs/n_ary_tree_level_order.cpp)
-#add_executable(keys_and_rooms leetcode/bfs/keys_and_rooms.cpp)
-#add_executable(transpose_matrix leetcode/easy/transpose_matrix.cpp)
-#add_executable(reverse_words_in_a_string_3 leetcode/easy/reverse_words_in_a_string_3.cpp)
 #add_executable(remove_duplicates_from_sorted_list leetcode/linked_list/remove_duplicates_from_sorted_list.cpp)
 #add_executable(dining_philosophers_problem leetcode/concurrency/dining_philosophers_problem.cpp)
 #add_executable(add_bigint_string leetcode/easy/add_bigint_string.cpp)

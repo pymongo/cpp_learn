@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="learn_cpp"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/w/repos/my_repos/learn_cpp/target"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/w/repos/my_repos/learn_cpp/target"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/w/repos/my_repos/learn_cpp/target"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="curl_http_request">
+				<Option output="/home/w/repos/my_repos/learn_cpp/target/curl_http_request" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/w/repos/my_repos/learn_cpp/target"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/glib-2.0/include"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/libmount"/>
+					<Add directory="/usr/include/blkid"/>
+					<Add directory="/usr/include/fribidi"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/lzo"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/cloudproviders"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/dbus-1.0/include"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 curl_http_request"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="curl_http_request/fast">
+				<Option output="/home/w/repos/my_repos/learn_cpp/target/curl_http_request" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/w/repos/my_repos/learn_cpp/target"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/glib-2.0/include"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/libmount"/>
+					<Add directory="/usr/include/blkid"/>
+					<Add directory="/usr/include/fribidi"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/lzo"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/cloudproviders"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/dbus-1.0/include"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 curl_http_request/fast"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="temp">
+				<Option output="/home/w/repos/my_repos/learn_cpp/target/temp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/w/repos/my_repos/learn_cpp/target"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/glib-2.0/include"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/libmount"/>
+					<Add directory="/usr/include/blkid"/>
+					<Add directory="/usr/include/fribidi"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/lzo"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/cloudproviders"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/dbus-1.0/include"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 temp"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="temp/fast">
+				<Option output="/home/w/repos/my_repos/learn_cpp/target/temp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/w/repos/my_repos/learn_cpp/target"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/glib-2.0/include"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/libmount"/>
+					<Add directory="/usr/include/blkid"/>
+					<Add directory="/usr/include/fribidi"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/lzo"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/cloudproviders"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/dbus-1.0/include"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 temp/fast"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="polymorphism">
+				<Option output="/home/w/repos/my_repos/learn_cpp/target/polymorphism" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/w/repos/my_repos/learn_cpp/target"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/glib-2.0/include"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/libmount"/>
+					<Add directory="/usr/include/blkid"/>
+					<Add directory="/usr/include/fribidi"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/lzo"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/cloudproviders"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/dbus-1.0/include"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 polymorphism"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="polymorphism/fast">
+				<Option output="/home/w/repos/my_repos/learn_cpp/target/polymorphism" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/w/repos/my_repos/learn_cpp/target"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/glib-2.0/include"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/libmount"/>
+					<Add directory="/usr/include/blkid"/>
+					<Add directory="/usr/include/fribidi"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/lzo"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/cloudproviders"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/dbus-1.0/include"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 polymorphism/fast"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtktest">
+				<Option output="/home/w/repos/my_repos/learn_cpp/target/gtktest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/w/repos/my_repos/learn_cpp/target"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/glib-2.0/include"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/libmount"/>
+					<Add directory="/usr/include/blkid"/>
+					<Add directory="/usr/include/fribidi"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/lzo"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/cloudproviders"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/dbus-1.0/include"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 gtktest"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtktest/fast">
+				<Option output="/home/w/repos/my_repos/learn_cpp/target/gtktest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/w/repos/my_repos/learn_cpp/target"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/glib-2.0/include"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/libmount"/>
+					<Add directory="/usr/include/blkid"/>
+					<Add directory="/usr/include/fribidi"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/lzo"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/cloudproviders"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/dbus-1.0/include"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 gtktest/fast"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dynamic_cast">
+				<Option output="/home/w/repos/my_repos/learn_cpp/target/dynamic_cast" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/w/repos/my_repos/learn_cpp/target"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/glib-2.0/include"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/libmount"/>
+					<Add directory="/usr/include/blkid"/>
+					<Add directory="/usr/include/fribidi"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/lzo"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/cloudproviders"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/dbus-1.0/include"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 dynamic_cast"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dynamic_cast/fast">
+				<Option output="/home/w/repos/my_repos/learn_cpp/target/dynamic_cast" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/w/repos/my_repos/learn_cpp/target"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/glib-2.0/include"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/libmount"/>
+					<Add directory="/usr/include/blkid"/>
+					<Add directory="/usr/include/fribidi"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/lzo"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/cloudproviders"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/dbus-1.0/include"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 dynamic_cast/fast"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="openssl_md5">
+				<Option output="/home/w/repos/my_repos/learn_cpp/target/openssl_md5" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/w/repos/my_repos/learn_cpp/target"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/glib-2.0/include"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/libmount"/>
+					<Add directory="/usr/include/blkid"/>
+					<Add directory="/usr/include/fribidi"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/lzo"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/cloudproviders"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/dbus-1.0/include"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 openssl_md5"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="openssl_md5/fast">
+				<Option output="/home/w/repos/my_repos/learn_cpp/target/openssl_md5" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/w/repos/my_repos/learn_cpp/target"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/glib-2.0/include"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/libmount"/>
+					<Add directory="/usr/include/blkid"/>
+					<Add directory="/usr/include/fribidi"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/lzo"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/cloudproviders"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/dbus-1.0/include"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 openssl_md5/fast"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/w/repos/my_repos/learn_cpp/target/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/w/repos/my_repos/learn_cpp/cpp_grammar/class/dynamic_cast.cpp">
+			<Option target="dynamic_cast"/>
+		</Unit>
+		<Unit filename="/home/w/repos/my_repos/learn_cpp/cpp_grammar/class/polymorphism.cpp">
+			<Option target="polymorphism"/>
+		</Unit>
+		<Unit filename="/home/w/repos/my_repos/learn_cpp/temp.cpp">
+			<Option target="temp"/>
+		</Unit>
+		<Unit filename="/home/w/repos/my_repos/learn_cpp/third_party_lib/curl_http_request.c">
+			<Option target="curl_http_request"/>
+		</Unit>
+		<Unit filename="/home/w/repos/my_repos/learn_cpp/third_party_lib/gtk.c">
+			<Option target="gtktest"/>
+		</Unit>
+		<Unit filename="/home/w/repos/my_repos/learn_cpp/third_party_lib/openssl_md5.c">
+			<Option target="openssl_md5"/>
+		</Unit>
+		<Unit filename="/home/w/repos/my_repos/learn_cpp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

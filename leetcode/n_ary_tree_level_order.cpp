@@ -11,7 +11,6 @@ public:
     int val;
     vector<Node *> children;
 
-
     // TODO QA.1 为什么要留一个无参构造方法？我记得在Java里，如果重载了构造方法，定义一个无参构造方法是为了防止隐式super调用父类的构造方法时报错
     // Node() = default;
 
@@ -29,11 +28,9 @@ public:
     }
 };
 
-// Runtime: 28 ms, faster than 98.84% of C++ online submissions for Maximum Depth of N-ary Tree.
 class Solution {
 public:
-    // 搞不懂leetcode上的解答模板为什么那么喜欢用instance的函数，用static不好吗？可能是历史遗留问题吧，Rust的leetcode模板是用association function，而Go就直接是一个函数了
-    // 类似Python的typehint，这个 -> int写不写都对编译结果没有影响
+    // level_order to tree's bottom, get max_depth
     static auto maxDepth(Node *root) -> int {
         if (root == nullptr) {
             return 0;
@@ -100,7 +97,6 @@ struct ListNode {
 int main() {
     auto head = ListNode{.val=1, .next=NULL};
     ListNode *head_ptr = &head;
-//    ListNode& head_ref = head;
 //    free(head_ptr);
 
     Node a = Node(1);
@@ -108,43 +104,4 @@ int main() {
     Node &a_ref = a;
     cout << Solution::maxDepth(a_ptr) << endl;
     return 0;
-}
-
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    // TODO 结构体的构造方法?
-    explicit TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-};
-
-auto binary_tree_max_depth(TreeNode *root) -> int {
-    if (root == nullptr) {
-        return 0;
-    }
-    int depth = 0;
-    queue<TreeNode *> q = queue<TreeNode *>();
-    q.push(root);
-    q.push(nullptr);
-    while (!q.empty()) {
-        TreeNode *node = q.front();
-        q.pop();
-        if (node == nullptr) {
-            depth++;
-            if (q.empty()) {
-                break;
-            }
-            q.push(nullptr);
-            continue;
-        }
-
-        if (node->left != nullptr) {
-            q.push(node->left);
-        }
-        if (node->right != nullptr) {
-            q.push(node->right);
-        }
-    }
-
-    return depth;
 }

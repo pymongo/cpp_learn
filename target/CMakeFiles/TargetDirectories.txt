@@ -1,0 +1,8 @@
+/home/w/repos/my_repos/learn_cpp/target/CMakeFiles/rebuild_cache.dir
+/home/w/repos/my_repos/learn_cpp/target/CMakeFiles/edit_cache.dir
+/home/w/repos/my_repos/learn_cpp/target/CMakeFiles/curl_http_request.dir
+/home/w/repos/my_repos/learn_cpp/target/CMakeFiles/temp.dir
+/home/w/repos/my_repos/learn_cpp/target/CMakeFiles/polymorphism.dir
+/home/w/repos/my_repos/learn_cpp/target/CMakeFiles/gtktest.dir
+/home/w/repos/my_repos/learn_cpp/target/CMakeFiles/dynamic_cast.dir
+/home/w/repos/my_repos/learn_cpp/target/CMakeFiles/openssl_md5.dir
