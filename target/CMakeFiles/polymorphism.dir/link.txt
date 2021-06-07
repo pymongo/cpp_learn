@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/polymorphism.dir/cpp_grammar/class/polymorphism.cpp.o -o polymorphism 

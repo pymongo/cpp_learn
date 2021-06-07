@@ -1,1 +1,0 @@
-/usr/bin/cc -g CMakeFiles/curl_http_request.dir/third_party_lib/curl_http_request.c.o -o curl_http_request  -lcurl 
