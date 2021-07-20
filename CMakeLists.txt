@@ -20,7 +20,8 @@ target_link_libraries(boost_example_random ${Boost_LIBRARIES})
 ]]
 
 # temp
-add_executable(temp temp.cpp)
+add_executable(temp temp.c)
+target_link_libraries(temp pthread)
 
 # C++ grammar
 #add_executable(sum_parameter_pack_or_va_list cpp_grammar/sum_parameter_pack_or_va_list.cpp)
@@ -28,32 +29,19 @@ add_executable(polymorphism cpp_grammar/class/polymorphism.cpp)
 add_executable(dynamic_cast cpp_grammar/class/dynamic_cast.cpp)
 
 # third-party libraries API
+find_package(PkgConfig REQUIRED)
 add_executable(openssl_md5 third_party_lib/openssl_md5.c)
 target_link_libraries(openssl_md5 crypto) # gcc -lssl or gcc -lcrypto
 add_executable(curl_http_request third_party_lib/curl_http_request.c)
 target_link_libraries(curl_http_request curl)
-## gtk https://gist.github.com/fracek/3323924
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(GTK REQUIRED gtk+-3.0)
-include_directories(${GTK_INCLUDE_DIRS})
-link_directories(${GTK_LIBRARY_DIRS})
-add_definitions(${GTK_CFLAGS_OTHER})
-add_executable(gtktest third_party_lib/gtk.c)
-target_link_libraries(gtktest ${GTK_LIBRARIES})
 
 #[[
-# third-party libraries API
-add_executable(sqlite third_party_lib/sqlite.c)
-target_link_libraries(sqlite sqlite3)# sqlite3库单Header单so比较简单，可以这么导入
-
 # standard libraries API
 #add_executable(regex std_lib/regex.c)
 #add_executable(stdin_c std_lib/stdin.c)
 #add_executable(stdin_cpp std_lib/stdin.cpp)
 #add_executable(file_input_stream std_lib/fixme_ifstream.cpp)
 #add_executable(return_value_of_printf std_lib/return_value_of_printf.c)
-#add_executable(thread_run_interval_print_time std_lib/thread_run_interval_print_time.cpp)
-#add_executable(fork_child_process_and_wait std_lib/fork_child_process_and_wait.c)
 
 # leetcode
 #add_executable(n_ary_tree_level_order leetcode/bfs/n_ary_tree_level_order.cpp)
